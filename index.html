@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my brand Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: gold;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #000, #333, #666);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      background: gold;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 60px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 40px;
+    }
+
+    /* About */
+    .about {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* Services */
+    .services {
+      background: #111;
+      color: white;
+    }
+
+    .service-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .box {
+      background: #222;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+    }
+
+    .box h3 {
+      margin: 15px 0;
+    }
+
+    .icon {
+      font-size: 50px;
+    }
+
+    /* Extra Section */
+    .extra {
+      background: linear-gradient(to right, gold, orange);
+      text-align: center;
+      color: black;
+    }
+
+    .extra p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* Contact */
+    .contact-form {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background: black;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #333;
+    }
+
+    /* Footer */
+    footer {
+      background: black;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 45px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .about img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>MyBrand</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>Creative Digital Agency</h2>
+
+    <p>
+      Hum modern aur stylish websites banate hain jo business ko professional look deti hain.
+    </p>
+
+    <button class="btn">Explore More</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="title">About Us</h2>
+
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="About Image">
+
+      <div class="about-text">
+        <p>
+          Hum ek creative team hain jo web design, development aur branding services provide karti hai.
+          Hamara focus clean design aur modern UI/UX par hota hai.
+        </p>
+
+        <p>
+          Hamne multiple stylish projects complete kiye hain aur clients ko premium quality websites provide ki hain.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2 class="title">Our Services</h2>
+
+    <div class="service-boxes">
+      <div class="box">
+        <div class="icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Responsive aur modern websites development.</p>
+      </div>
+
+      <div class="box">
+        <div class="icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Stylish aur user-friendly interfaces.</p>
+      </div>
+
+      <div class="box">
+        <div class="icon">🚀</div>
+        <h3>SEO Marketing</h3>
+        <p>Business growth aur better online visibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Section -->
+  <section class="extra">
+    <h2 class="title">Why Choose Us?</h2>
+
+    <p>
+      Hamari team modern technologies aur attractive layouts use karti hai taake aapka project unique aur premium lage.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="title">Contact Us</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 MyBrand. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
